@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Kanban Board</title>
+</head>
+<body>
+    <section id="hero" class="d-flex align-items-center"> 
+    <div class="container">
+        <div class="kanban-heading">
+            <strong class="kanban-heading-text">KANBAN BOARD</strong>
+        </div>
+        <div class="kanban-board">
+            <div class="kanban-block" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>To Do</strong>
+                <div class="task-button-block">
+                    <button id="task-button" onclick="createTask()">Create new task</span>
+                </div>
+                
+            </div>
+            <div class="kanban-block" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>In Progress</strong>
+                <div class="task-button-block">
+                    <button id="task-button" onclick="createTask()">Create new task</span>
+                </div>
+            </div>
+            <div class="kanban-block" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>Done</strong>
+                <div class="task-button-block">
+                    <button id="task-button" onclick="createTask()">Create new task</span>
+                </div>
+            </div>
+            <div class="create-new-task-block" id="create-new-task-block">
+                <strong>New Task</strong>
+                <span class="form-row">
+                    <label class="form-row-label" for="task-name">Task</label>
+                    <input class="form-row-input" type="text" name="task-name" id="task-name">
+                </span>
+                <span class="form-row">
+                    <label class="form-row-label" for="task-name">Description</label>
+                    <textarea class="form-row-input" name="task-description" id="task-description" cols="70" rows="10"></textarea>
+                </span>
+                <span class="form-row">
+                    
+                    <script src="script.js"></script>
+                </span>
+                <span class="form-row-buttons">
+                    <button id="edit-button" onclick="editTask()">Edit</span>
+                    <button id="save-button" onclick="saveTask()">Save to ToDo</span>
+                    <button id="save-button" onclick="saveTask2()">Save to InProgress</span>
+                        <button id="save-button" onclick="saveTask3()">Save to Done</span>
+                    <button id="cancel-button" onclick="createTask()">Cancel</span>
+                </span>
+            </div>
+        </div>
+    </div></section>
+</body>
+</html>
